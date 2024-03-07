@@ -17,9 +17,9 @@ export default function MenuItem(props: MenuItemProps) {
         <NavLink
             to={url}
             className={({ isActive }) => {
-                let formatacaoInicial = `flex items-center gap-2 text-zinc-400 rounded-md
+                let formatacaoInicial = `flex items-center gap-2 rounded-md
                 hover:bg-zinc-800 px-3 py-2 `;
-                let formatacao = isActive ? formatacaoInicial + `text-orange-400 bg-zinc-900` : formatacaoInicial;
+                let formatacao = isActive ? formatacaoInicial + `text-orange-400 bg-zinc-900` : formatacaoInicial + `text-zinc-400`;
                 return formatacao;
             }}
         >
