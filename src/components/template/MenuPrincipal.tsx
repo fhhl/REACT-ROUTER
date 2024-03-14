@@ -1,4 +1,4 @@
-import { IconDirectionSign, IconFileAlert, IconLayoutNavbarCollapse, IconMenu, IconX } from "@tabler/icons-react";
+import { IconActivity, IconDirectionSign, IconFileAlert, IconLayoutNavbarCollapse, IconLoader, IconLocation, IconMenu, IconRefreshAlert, IconRoute, IconSearch, IconX } from "@tabler/icons-react";
 import { MenuItem } from "../../data/models/MenuItem";
 import Logo from "./Logo";
 import MenuPrincipalItem from "./MenuPrincipalItem";
@@ -8,7 +8,13 @@ import { useState } from "react";
 const itens: MenuItem[] = [
     {titulo:"Tipos de Links", url:"/tiposDeLinks", icone:<IconLayoutNavbarCollapse/>},
     {titulo:"Navegação com NavLink", url:"/navegacaoComNavLink", icone:<IconDirectionSign/>},
-    {titulo:"Página 404", url:"/pagina404", icone:<IconFileAlert/>}
+    {titulo:"Página 404", url:"/pagina404", icone:<IconFileAlert/>},
+    {titulo:"Parâmetros de Rota", url:"/parametrosDeRota", icone:<IconRoute/>},
+    {titulo:"Parâmetros de Busca", url:"/parametrosDeBusca", icone:<IconSearch/>},
+    {titulo:"Entendendo Use Location", url:"/entendendoUseLocation", icone:<IconLocation/>},
+    {titulo:"Entendendo Actions", url:"/entendendoActions", icone:<IconActivity/>},
+    {titulo:"Entendendo Loaders", url:"/entendendoLoaders", icone:<IconLoader/>},
+    {titulo:"Lidando com erros do loader", url:"/lidandoComErrosDoLoader", icone:<IconRefreshAlert/>},
 ];
 
 export default function MenuPrincipal() {

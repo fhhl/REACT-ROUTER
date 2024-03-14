@@ -4,9 +4,9 @@ export default function MenuInterno(props) {
     console.log(props)
     const formatacaoLink = (isActive) => {
         return `hover:bg-zinc-800 
-                text-lg font-bold text-zinc-300 hover:text-orange-500
+                text-lg font-bold hover:text-orange-500
                 py-2 px-4 rounded-md mx-4 
-                ${isActive ? " text-orange-500" : ""}`;
+                ${isActive ? " text-orange-500 bg-zinc-800" : "text-zinc-300"}`;
     };
 
     const navlinks = props.links?.map(link=>{
