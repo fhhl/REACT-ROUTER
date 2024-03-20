@@ -4,27 +4,26 @@ import Sobre from "../pages/shared/sobre"
 import ErroDoLoader from "../pages/lidandoComErrosDoLoader/erroDoLoader"
 
 const links = [
-    { url: "lidandoComErrosDoLoader", text: "Início" },
-    { url: "lidandoComErrosDoLoader/sobre", text: "Sobre" },
+    { url: "/lidandoComErrosDoLoader", text: "Início" },
+    { url: "/lidandoComErrosDoLoader/sobre", text: "Sobre" },
 ]
 
 const rotas = (
-    <Route path="lidandoComErrosDoLoader">
-        <Route
-            index
-            element={<Inicio links={links} />}
-            errorElement={<ErroDoLoader texto="Não foi possível acessar início" 
-            links={links} />}
-            loader={() => { throw new Error() }}
-        />
-        <Route
-            path="sobre"
-            element={<Sobre links={links} />}
-            errorElement={<ErroDoLoader texto="Não foi possível acessar sobre" 
-            links={links} />}
-            loader={() => { throw new Error() }}
-        />
-    </Route>
+    <Route path="lidandoComErrosDoLoader"
+        errorElement={<ErroDoLoader texto="Algo de errado, não está certo" links={links} />}>
+            <Route
+                index
+                element={<Inicio links={links} />}
+                // errorElement={<ErroDoLoader texto="Não foi possível acessar início" links={links} />}
+                loader={() => { throw new Error() }}
+            />
+            <Route
+                path="sobre"
+                element={<Sobre links={links} />}
+                errorElement={<ErroDoLoader texto="Não foi possível acessar sobre" links={links} />}
+                loader={() => { throw new Error() }}
+            />
+        </Route>
 )
 
 export default rotas

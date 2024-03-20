@@ -18,7 +18,7 @@ export default function MenuItem(props: MenuItemProps) {
             to={url}
             className={({ isActive }) => {
                 let formatacaoInicial = `flex items-center gap-2 rounded-md
-                hover:bg-zinc-800 px-3 py-2 `;
+                hover:bg-zinc-800 px-3 py-1 `;
                 let formatacao = isActive ? formatacaoInicial + `text-orange-400 bg-zinc-900` : formatacaoInicial + `text-zinc-400`;
                 return formatacao;
             }}

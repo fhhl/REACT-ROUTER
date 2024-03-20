@@ -17,6 +17,7 @@
     "noImplicitAny": false,
     "noPropertyAccessFromIndexSignature": false,
     "suppressImplicitAnyIndexErrors": true,
+    "ignoreDeprecations": "5.0",
     "jsx": "react-jsx",
   },
   "include": [
